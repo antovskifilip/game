@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Билјард</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      background-color: hsl(0, 88%, 51%);
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    #Филип, #Теона {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      border: none;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #Теона {
+      background-color: darkred;
+    }
+
+    /* Media Query за мобилни уреди */
+    @media only screen and (max-width: 600px) {
+      h1 {
+        font-size: 16px;
+        padding: 8px 16px;
+      }
+
+      #Филип, #Теона {
+        padding: 8px 16px;
+        font-size: 14px;
+        width: 80%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<script>
+  function clickФилипButton() {
+    alert('Те частам палачинка од Сакаш');
+  }
+
+  function hoverТеонаButton() {
+    let x = Math.random() * (window.innerWidth - 100); // Осигурај простор
+    let y = Math.random() * (window.innerHeight - 50); // Осигурај простор
+    let button = document.getElementById('Теона');
+    button.style.position = 'absolute';
+    button.style.left = x + 'px';
+    button.style.top = y + 'px';
+  }
+</script>
+<body>
+<h1>Кој е најдобар во билјард ?</h1>
+<input id="Филип" type="button" value="Филип" onclick="clickФилипButton()">
+<input id="Теона" type="button" value="Теона" onclick="hoverТеонаButton()">
+</body>
+</html>
